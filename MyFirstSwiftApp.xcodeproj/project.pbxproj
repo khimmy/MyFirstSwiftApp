@@ -12,6 +12,8 @@
 		C2766AD31CEC2F0A006F9C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2766AD11CEC2F0A006F9C84 /* Main.storyboard */; };
 		C2766AD51CEC2F0A006F9C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2766AD41CEC2F0A006F9C84 /* Assets.xcassets */; };
 		C2766AD81CEC2F0A006F9C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2766AD61CEC2F0A006F9C84 /* LaunchScreen.storyboard */; };
+		C2766AE01CEC3EFB006F9C84 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2766ADF1CEC3EFB006F9C84 /* SecondViewController.swift */; };
+		C2766AE21CED4EC4006F9C84 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2766AE11CED4EC4006F9C84 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C2766AD41CEC2F0A006F9C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2766AD71CEC2F0A006F9C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2766AD91CEC2F0A006F9C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2766ADF1CEC3EFB006F9C84 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C2766AE11CED4EC4006F9C84 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 		C2766AC11CEC2F0A006F9C84 = {
 			isa = PBXGroup;
 			children = (
+				C2766ADF1CEC3EFB006F9C84 /* SecondViewController.swift */,
 				C2766ACC1CEC2F0A006F9C84 /* MyFirstSwiftApp */,
 				C2766ACB1CEC2F0A006F9C84 /* Products */,
 			);
@@ -60,6 +65,7 @@
 				C2766AD41CEC2F0A006F9C84 /* Assets.xcassets */,
 				C2766AD61CEC2F0A006F9C84 /* LaunchScreen.storyboard */,
 				C2766AD91CEC2F0A006F9C84 /* Info.plist */,
+				C2766AE11CED4EC4006F9C84 /* ThirdViewController.swift */,
 			);
 			path = MyFirstSwiftApp;
 			sourceTree = "<group>";
@@ -96,6 +102,7 @@
 				TargetAttributes = {
 					C2766AC91CEC2F0A006F9C84 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5UM93D7M7C;
 					};
 				};
 			};
@@ -135,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2766AE01CEC3EFB006F9C84 /* SecondViewController.swift in Sources */,
 				C2766AD01CEC2F0A006F9C84 /* ViewController.swift in Sources */,
+				C2766AE21CED4EC4006F9C84 /* ThirdViewController.swift in Sources */,
 				C2766ACE1CEC2F0A006F9C84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,10 +258,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstSwiftApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = samsungsds.com.MyFirstSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyFirstSwiftApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = samsungsds.com.MyFirstSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

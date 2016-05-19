@@ -19,7 +19,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func unwindToViewController (segue:UIStoryboardSegue) {
+        print ("unwindToViewController");
+        
+    }
 
+   /* @IBAction func OpenSecondScreen(sender: AnyObject) {
+        let secondview=self.storyboard!.instantiateViewControllerWithIdentifier("secondview");
+        secondview.modalTransitionStyle=UIModalTransitionStyle.PartialCurl;
+        self.presentViewController(secondview, animated: true, completion: nil);
+    }*/
 
 }
 
