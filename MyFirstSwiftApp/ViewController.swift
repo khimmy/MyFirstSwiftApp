@@ -9,12 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var switchVal:Bool=false;
+    @IBOutlet weak var emailTxtField: UITextField?;
+    
+    
+    func notificationMethod (notification:NSNotification) {
+        self.view.backgroundColor=UIColor.redColor();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector (notificationMethod(_:)), name: "Help!", object: nil);
     }
 
+    @IBAction func OnSwitch (sender:AnyObject) {
+        let updateSwitch = sender as! UISwitch
+        
+        if updateSwitch.on {
+            switchVal=true;
+        }
+        else {
+            switchVal=false;
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -22,6 +43,14 @@ class ViewController: UIViewController {
     
     @IBAction func unwindToViewController (segue:UIStoryboardSegue) {
         print ("unwindToViewController");
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let svc=segue.destinationViewController as? SecondViewController {
+            svc.textFieldVal=(emailTxtField!.text!);
+            svc.switchVal=switchVal;
+        }
         
     }
 

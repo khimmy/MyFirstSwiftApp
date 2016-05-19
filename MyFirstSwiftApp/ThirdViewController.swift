@@ -9,12 +9,17 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    @IBOutlet weak var myLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print ("ThirdViewController Loaded");
+        
+        let appDelegate=UIApplication.sharedApplication().delegate as! AppDelegate // OUR OWN APPLICATION OBJECT
+        
+        myLabel.text=appDelegate.myString;
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +28,9 @@ class ThirdViewController: UIViewController {
     }
     
 
+    @IBAction func SendMessageClicked(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("Help!", object: nil);
+    }
     /*
     // MARK: - Navigation
 

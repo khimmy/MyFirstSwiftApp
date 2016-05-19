@@ -9,7 +9,12 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    var switchVal:Bool=false;
+    var textFieldVal:String="";
 
+    @IBOutlet weak var txtSwitchState: UILabel!
+    @IBOutlet weak var txtFieldValue: UILabel!
+    
     @IBAction func NextWithSegue(sender: AnyObject) {
         performSegueWithIdentifier("thirdsegue", sender: self);
     }
@@ -24,11 +29,33 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print ("SecondViewController.viewDidLoad");
 
         // Do any additional setup after loading the view.
+        if switchVal {
+            txtSwitchState.text="On"
+        }
+        else {
+            txtSwitchState.text="Off"
+        }
+        
+        txtFieldValue.text=textFieldVal;
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        print ("SecondViewController.viewWillAppear")
+    }
+    override func viewDidAppear(animated: Bool) {
+        print ("SecondViewController.viewDidAppear");
+    }
+    override func viewWillDisappear(animated: Bool) {
+        print ("SecondViewController.viewWillDisappear");
+    }
+    override func viewDidDisappear(animated: Bool) {
+        print ("SecondViewController.viewDidDisappear");
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
